@@ -2,6 +2,7 @@
 [![Test package](https://github.com/ComputationalPhysiology/drug-database/actions/workflows/main.yml/badge.svg)](https://github.com/ComputationalPhysiology/drug-database/actions/workflows/main.yml)
 [![pre-commit](https://github.com/ComputationalPhysiology/drug-database/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/ComputationalPhysiology/drug-database/actions/workflows/pre-commit.yml)
 [![Deploy static content to Pages](https://github.com/ComputationalPhysiology/drug-database/actions/workflows/build_docs.yml/badge.svg)](https://github.com/ComputationalPhysiology/drug-database/actions/workflows/build_docs.yml)
+[![PyPI version](https://badge.fury.io/py/drug-database.svg)](https://badge.fury.io/py/drug-database)
 
 # Drug database
 Simple command line interface for getting scaling factors for different drugs
