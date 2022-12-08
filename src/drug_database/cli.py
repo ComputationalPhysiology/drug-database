@@ -1,4 +1,6 @@
 """Console script for drug_database."""
+import json as _json
+
 import typer
 from rich.console import Console
 from rich.table import Table
@@ -63,7 +65,14 @@ def list_drugs():
 
 
 @app.command(help="Show all factors for a given drug and FPC")
-def show_drug_with_fpc(drug_name: str, fpc: int):
+def show_drug(
+    drug_name: str,
+    fpc: int = typer.Option(1, help="Number of times FPC"),
+    json: bool = typer.Option(
+        False,
+        help="Display out point in json format. The default is to show a rich table",
+    ),
+):
     drugs = get_drug_factors()
 
     # All keys are capitalized
@@ -81,13 +90,16 @@ def show_drug_with_fpc(drug_name: str, fpc: int):
         raise typer.Exit(101)
 
     data = drug[str(fpc)]
-    table = Table(title=f"Scaling factors for drug {drug_name} and FPC {fpc}")
-
-    table.add_column("Name", justify="right", style="cyan", no_wrap=True)
-    table.add_column("Value", style="magenta")
-
-    for k, v in data.items():
-        table.add_row(k, str(v))
-
     console = Console()
-    console.print(table)
+    if json:
+        console.print(_json.dumps(data))
+    else:
+        table = Table(title=f"Scaling factors for drug {drug_name} and FPC {fpc}")
+
+        table.add_column("Name", justify="right", style="cyan", no_wrap=True)
+        table.add_column("Value", style="magenta")
+
+        for k, v in data.items():
+            table.add_row(k, str(v))
+
+        console.print(table)

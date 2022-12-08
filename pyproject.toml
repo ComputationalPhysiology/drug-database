@@ -14,7 +14,6 @@ dependencies = [
 ]
 
 [project.scripts]
-drug-database = "drug_database.cli:app"
 drug-db = "drug_database.cli:app"
 
 [project.optional-dependencies]
@@ -31,6 +30,8 @@ dev = [
 docs = [
    "jupyter-book",
    "jupytext",
+   "plotly",
+   "ipython<8.7.0"
 ]
 all = [
    "drug_database[test]",

@@ -1,7 +1,8 @@
 format: jb-book
-root: index
+root: README
 
 parts:
   - caption: Python API
     chapters:
+    - file: "docs/drug_factors"
     - file: "docs/api"
