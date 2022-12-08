@@ -15,6 +15,7 @@ dependencies = [
 
 [project.scripts]
 drug-database = "drug_database.cli:app"
+drug-db = "drug_database.cli:app"
 
 [project.optional-dependencies]
 test = [
