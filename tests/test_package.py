@@ -11,7 +11,7 @@ def test_list_drugs():
 
 
 def test_list_drug_with_fpc():
-    result = runner.invoke(app, ["show-drug-with-fpc", "verapamil", "1"])
+    result = runner.invoke(app, ["show-drug", "verapamil", "--fpc", "1"])
     assert result.exit_code == 0
     assert "Verapamil and FPC 1" in result.output
     assert "scale_drug_INa" in result.output
