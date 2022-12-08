@@ -6,8 +6,8 @@
 # Drug database
 Simple command line interface for getting scaling factors for different drugs
 
-Documentation: https://ComputationalPhysiology.github.io/drug-database/
-Source code: https://github.com/ComputationalPhysiology/drug-database
+- Documentation: https://ComputationalPhysiology.github.io/drug-database/
+- Source code: https://github.com/ComputationalPhysiology/drug-database
 
 ## Install
 ```
