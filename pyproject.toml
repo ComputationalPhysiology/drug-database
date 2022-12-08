@@ -25,7 +25,7 @@ test = [
 dev = [
     "pdbpp",
     "ipython",
-
+    "bump2version",
     "pre-commit",
 ]
 docs = [
@@ -34,7 +34,8 @@ docs = [
 ]
 all = [
    "drug_database[test]",
-   "drug_database[docs]"
+   "drug_database[docs]",
+   "drug_database[dev]"
 ]
 
 [tool.setuptools.packages.find]
